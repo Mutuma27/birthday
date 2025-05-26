@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Moonie's Form</title>
+        <style>
+            body{
+                background-image: url(moon3.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: blanchedalmond;
+            }
+            .diff{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Before we move on I need to make sure it's really you <span style="font-size: 60px;">&#128578</span></h1>
+        (This is just an excuse for me to revise creating forms&#128514)<br>
+________________________________________________________________________________________________________________________________________________________________________
+        <form>
+            <label for="mname">Enter your First Name:</label><br>
+            <input type="text" id="mname" name="mname" placeholder="Don't type 'Moonie'" required><br><br>
+            <label for="wname">Enter your Second Name:</label><br>
+            <input type="text" id="wname" name="wname" placeholder="Must fill" required><br><br>
+            <label for="mail">Enter your email:</label>
+            <input type="email" id="mail" name="mail" placeholder="e.g moonie@gmail.com" required><br><br>
+            <label for="phone">Phone number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+254## #### ###"><br><br>
+            <label for="bday">Birthdate:</label>
+            <input type="date" id="bday" name="bday"><br><br>
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" value="Male"> Male <input type="radio" name="gender" value="Female"> Female<br><br>
+            I'd continue but nimechoka &#128514<br>
+            But before you proceed...<br><br>
+            <label for="password" style="color: red;">Weka Password:</label>
+            <input type="password" id="password" name="password" placeholder="Its Your ID &#128514"><br><br>
+            
+        </form>
+        <div class="diff"> <button type="button"onclick="dothis()">Submit</button>
+        <p style="color: orange;" id="mmm"></p>
+        </div> 
+        <script>
+            function dothis(){
+              const correctID = "855133484";
+              const enteredID = document.getElementById("password").value;
+        
+              if (enteredID === correctID) {
+                window.location.href ="happy.html";
+              } else {
+                document.getElementById("mmm").innerHTML ="Kwani you gave me the wrong ID number";
+              }
+            }
+        </script>
+                <footer>
+                    <a href="Win.html">Back</a>
+                </footer>
+    </body>
+</html>
