@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Every time I called you beautiful 💖</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { min-height: 100%; }
+  body {
+    font-family: 'Quicksand', sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #1a0033 0%, #3d0066 40%, #800040 100%);
+    background-attachment: fixed;
+    padding: 32px 16px 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
+  .hearts { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 0; }
+  .hearts span {
+    position: absolute; bottom: -40px; font-size: 22px; opacity: 0.7;
+    animation: rise linear infinite;
+  }
+  @keyframes rise { to { transform: translateY(-110vh) rotate(360deg); opacity: 0; } }
+
+  .wrap { position: relative; z-index: 1; width: 100%; max-width: 720px; }
+
+  .card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 24px;
+    padding: 32px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(2rem, 5.5vw, 2.8rem);
+    background: linear-gradient(90deg, #ffb6e6, #fff, #ffd1f0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  .hero p { font-size: 1rem; opacity: 0.9; }
+
+  /* Counter */
+  .counter {
+    display: inline-flex; align-items: baseline; gap: 8px;
+    margin-top: 14px;
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  .counter .num {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5rem;
+    color: #ffd1f0;
+  }
+  .counter .lbl { font-size: 0.9rem; opacity: 0.85; }
+
+  /* Message list */
+  .messages {
+    display: grid;
+    gap: 14px;
+    margin-top: 8px;
+  }
+  .msg {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+    padding: 16px 18px;
+    text-align: left;
+    font-family: 'Caveat', cursive;
+    font-size: 1.35rem;
+    line-height: 1.45;
+    position: relative;
+    transition: transform .2s ease, background .2s ease;
+  }
+  .msg:hover { transform: translateY(-2px); background: rgba(255,255,255,0.11); }
+  .msg::before {
+    content: '💖';
+    position: absolute;
+    top: -10px; left: 14px;
+    font-size: 18px;
+    background: linear-gradient(135deg, #ff6fb5, #b14bff);
+    padding: 2px 8px;
+    border-radius: 999px;
+  }
+  .msg .date {
+    display: block;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.6;
+    margin-bottom: 6px;
+  }
+
+  /* Alternate accent colors for variety */
+  .msg:nth-child(3n)::before { background: linear-gradient(135deg, #ffb347, #ff6fb5); }
+  .msg:nth-child(3n+1)::before { background: linear-gradient(135deg, #6fc3ff, #b14bff); }
+
+  .actions {
+    display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+  }
+  .btn {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 999px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    transition: transform .15s ease, box-shadow .15s ease;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    border: none;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4); }
+  .btn-primary { background: linear-gradient(135deg, #ff6fb5, #b14bff); }
+  .btn-ghost { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); }
+
+  .footer { text-align: center; margin-top: 8px; font-size: 0.9rem; opacity: 0.75; }
+</style>
+</head>
+<body>
+  <div class="hearts" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <section class="card hero">
+      <h4>I wanted to add this just like i promissed..<br>
+        just to remind you incase you forget 🙂
+      </h4>
+      <h1>Every time I called you beautiful</h1>
+      <p>Because once was never going to be enough.</p>
+      <p>Actually nimeona I've said it sana I won't be able kuziweka zote hapa 😭</p>
+      <div class="counter">
+        <span class="num" id="count">0</span>
+        <span class="lbl">times and counting</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="messages" id="messages">
+
+        <!-- ========================================================== -->
+        <!--  PASTE YOUR MESSAGES BELOW. Copy this block for each one.   -->
+        <!--                                                             -->
+        <!--  <div class="msg">                                          -->
+        <!--    <span class="date">Month Day, Year</span>                -->
+        <!--    Your message here...                                     -->
+        <!--  </div>                                                     -->
+        <!-- ========================================================== -->
+
+        <div class="msg">
+          <span class="date">21/06/2026</span>
+          My beautiful Kikuyu lady 🙂‍↕️
+        </div>
+
+        <div class="msg">
+          <span class="date">25/04/2026</span>
+          You are Intergalactically beautiful 😌
+        </div>
+
+        <div class="msg">
+          <span class="date">18/11/2025</span>
+          My beautiful (crazy) queen
+        </div>
+
+        <div class="msg">
+          <span class="date">02/05/2026</span>
+          MLakini you're naturally beautiful 
+        </div>
+
+        <div class="msg">
+          <span class="date">02/06/2026</span>
+          I think the only thing you need is to love yourself a bit more🙃 I mean usisahau that you're beautiful
+        </div>
+
+        <div class="msg">
+          <span class="date">02/06/2026</span>
+         What do you mean ish ish😭you look beautiful
+        </div>
+
+        <div class="msg">
+          <span class="date">26/04/2026</span>
+          Or she realizes how beautiful you are and wants to be like you😌
+        </div>
+
+        <div class="msg">
+          <span class="date">18/12/2025</span>
+          If it gets to that time then ask me and I'll remind you how beautiful you are 😌
+        </div>
+
+        <div class="msg">
+          <span class="date">30/10/2025</span>
+          But why do you like that blurred filter 😂 you're beautiful
+        </div>
+
+        <div class="msg">
+          <span class="date">01/02/2026</span>
+          Coz to me you're beautiful regardless of how your hair looks😂 actually I love how you look with your natural hair there's a time I was asking you to keep it like that for some time 
+        </div>
+
+        <div class="msg">
+          <span class="date">02/05/2026</span>
+          "But I still looked awful 😭"...you said<br>
+          I've seen how you look when going out and when staying home 😂when horny when sleepy when tired when waking up😂 you've never looked awful😗 
+        </div>
+
+        <div class="msg">
+          <span class="date">20/01/2026</span>
+         Why are you surprised 😂 you're hot
+        </div>
+
+        <div class="msg">
+          <span class="date">02/01/2026</span>
+        You look really hot though 🌚
+        </div>
+
+        <div class="msg">
+          <span class="date">20/12/2025</span>
+        I'm sure you still looked hot😌😂
+        </div>
+
+        <div class="msg">
+          <span class="date">06/12/2025</span>
+        You're a bit too hot😭
+        </div>
+
+        <div class="msg">
+          <span class="date">10/01/2026</span>
+        I hope you'll get bored more 😭😂😂 you're really hot
+        </div>
+
+        <div class="msg">
+          <span class="date">10/11/2025</span>
+         The food iko kwa fridge na warming it is exhausting 😭
+          I'd rather eat you coz you're already hot🌚
+        </div>
+
+        <div class="msg">
+          <span class="date">08/12/2025</span>
+        Even if you got turned into a cold blooded animal and taken to Antarctica and placed in freezing water.. you'd still be hot😌
+        </div>
+
+        <div class="msg">
+          <span class="date">...</span>
+          <img src="cute.png" alt="cute">
+        </div>
+
+<p>I wish i could link the chats to whatsapp uzuione </p>
+<p>I'll continue the rest later it takes more time than i thought 😭</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="actions">
+        <a class="btn btn-primary" href="end.html">Continue →</a>
+        <a class="btn btn-ghost" href="Winnie.html">← Back</a>
+      </div>
+    </section>
+
+    <p class="footer">Every single one of them, I meant. 💖</p>
+  </div>
+
+<script>
+  // Auto-count messages
+  const count = document.querySelectorAll('#messages .msg').length;
+  const el = document.getElementById('count');
+  let n = 0;
+  const step = Math.max(1, Math.round(count / 30));
+  const tick = setInterval(() => {
+    n += step;
+    if (n >= count) { n = count; clearInterval(tick); }
+    el.textContent = n;
+  }, 40);
+
+  // Floating hearts
+  const hearts = document.querySelector('.hearts');
+  const emojis = ['💖','💗','💕','✨','🌸','💘'];
+  for (let i = 0; i < 18; i++) {
+    const s = document.createElement('span');
+    s.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    s.style.left = Math.random() * 100 + 'vw';
+    s.style.fontSize = (16 + Math.random() * 18) + 'px';
+    s.style.animationDuration = (8 + Math.random() * 10) + 's';
+    s.style.animationDelay = (Math.random() * 8) + 's';
+    hearts.appendChild(s);
+  }
+</script>
+</body>
+</html>

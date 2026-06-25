@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heyy Winnie</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'Quicksand', system-ui, sans-serif;
+    color: #fdeccd;
+    background: linear-gradient(135deg, #121c84 0%, #5b1e9e 50%, #922ae7 100%);
+    background-attachment: fixed;
+    line-height: 1.7;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 20px 60px;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, rgba(80,80,4,0.85), rgba(105,7,67,0.85));
+    border-radius: 20px;
+    padding: 50px 24px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+    backdrop-filter: blur(6px);
+  }
+  .hero h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(2.2rem, 6vw, 3.4rem);
+    margin: 0;
+    color: aliceblue;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+
+  .card {
+    margin-top: 28px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 18px;
+    padding: 28px 26px;
+    backdrop-filter: blur(8px);
+    font-size: 1.02rem;
+  }
+  .card p { margin: 0 0 14px; }
+  .accent-red { color: #ff8a9b; font-style: italic; }
+  .accent-blue { color: #9fd0ff; }
+
+  .actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 18px;
+  }
+  button {
+    cursor: pointer;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 999px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #fff;
+    background: linear-gradient(90deg, #ff6ec7, #7873f5);
+    box-shadow: 0 8px 20px rgba(120,115,245,0.35);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  button:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(120,115,245,0.5); }
+
+  #greeting {
+    text-align: center;
+    color: #f2e96b;
+    font-style: italic;
+    min-height: 1.5em;
+    margin-top: 14px;
+  }
+
+  footer {
+    margin-top: 36px;
+    text-align: center;
+  }
+  footer a {
+    color: #ffb3c1;
+    text-decoration: none;
+    border-bottom: 1px dashed #ffb3c1;
+    padding-bottom: 2px;
+  }
+  footer a:hover { color: #fff; border-color: #fff; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <h1>Heyy Winnie 🌙</h1>
+    </div>
+
+    <div class="card">
+      <p>Helloo. Heyyy</p>
+      <p>Ummmm... Don't mind the colors, I was just trying to have some fun 😂</p>
+      <p>It's Saturday date 5 April today. I don't even know what I'm going to say or put in this website. lakini si your birthday is far 😂 I know I'll have figured it out by then 🙂. Alafu don't expect much 😂 im still a beginner. I'll probably put a lot of unnecessary stuff coz I'm also using this to revise for my CAT and exam.</p>
+      <p>Ata i don't know nitabuy nini for your birthday. But you'll probably get a lot of gifts <span class="accent-red">(like from that rich guy who likes you 🙁</span> <span class="accent-blue">I'm not jealous)</span>.. and I want to do something no one else will do. Unless kuna mtu mwingine amedesign a web page for you 😳 😂</p>
+      <p>You were wondering what your ID was for 😂 I mean I could've used something else but oh well. Ata I haven't wished you a happy birthday. Ama maybe I should create <b>a whole different page</b> for that 🙂 Yeah i think that's what I'll do.</p>
+      <p>Btw don't show anyone this please 😂</p>
+      <p>Did you know cannibalism isn't illegal in the UK — or that your ear lobes are vertically in line with your nipples.... I'm just trying to fill this page 😂</p>
+
+      <p style="text-align:center; margin-top: 24px; font-size: 1.1rem;">Are you in love with the guy who typed all that?</p>
+      <div class="actions">
+        <button onclick="sayyes()">Yes</button>
+        <button onclick="sayno()">No</button>
+      </div>
+      <p id="greeting"></p>
+
+      <p style="margin-top: 28px;">I swear this is so cringe 😂😂 Ah but si umenizoea.. you've seen my emails 😂</p>
+      <p>Ama is this too much. I've been trying not to do "too much" since we're not dating 😂</p>
+      <p style="text-align:center; margin-top: 22px;">ANYWAY..... You can press <a href="happy.html" style="color:#ffd166; font-weight:600;">this</a> if you want to continue 🙂</p>
+    </div>
+
+    <p>I'll add a link to the new page so that if you want to go straight to see the times i called you beautiful you can just click <a href="beautiful.html" style="color:#f645de; font-weight:600;">here 🙂</a></p>
+
+    <footer>
+      <a href="Winform.html">← Back</a>
+    </footer>
+  </div>
+
+  <script>
+    function sayyes(){
+      document.getElementById("greeting").innerHTML = "Who said ni mimi nimetype all that... labda i told a friend to type for me 🙁";
+    }
+    function sayno(){
+      document.getElementById("greeting").innerHTML = "Ummm.. I couldn't think of what to say if you pressed no 😂";
+    }
+  </script>
+</body>
+</html>

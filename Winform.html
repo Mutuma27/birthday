@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moonie's Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, rgba(20, 20, 50, 0.7), rgba(50, 20, 80, 0.6)), url(moon3.jpg) center/cover no-repeat fixed;
+            color: blanchedalmond;
+            font-family: 'Quicksand', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 16px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 520px;
+            background: rgba(15, 10, 40, 0.55);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            padding: 36px 28px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.7rem;
+            line-height: 1.4;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #ffe9c4;
+        }
+
+        h1 .emoji { font-size: 2rem; vertical-align: middle; }
+
+        .subtitle {
+            text-align: center;
+            font-size: 0.95rem;
+            opacity: 0.85;
+            font-style: italic;
+            margin-bottom: 24px;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 233, 196, 0.5), transparent);
+            margin: 18px 0 26px;
+        }
+
+        form { display: flex; flex-direction: column; gap: 16px; }
+
+        .field { display: flex; flex-direction: column; gap: 6px; }
+
+        label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            color: #ffe9c4;
+        }
+
+        label.warn { color: #ff8a8a; }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 14px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: blanchedalmond;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: all 0.25s ease;
+        }
+
+        input::placeholder { color: rgba(255, 228, 181, 0.45); }
+
+        input:focus {
+            outline: none;
+            border-color: #ffb86b;
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 0 0 3px rgba(255, 184, 107, 0.2);
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            padding: 6px 0;
+        }
+
+        .radio-group label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        input[type="radio"] { accent-color: #ffb86b; }
+
+        .note {
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.85;
+            margin: 4px 0;
+        }
+
+        .actions { text-align: center; margin-top: 24px; }
+
+        button {
+            padding: 12px 36px;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #2a1a4a;
+            background: linear-gradient(135deg, #ffd89b, #ff9a76);
+            border: none;
+            border-radius: 999px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 6px 18px rgba(255, 154, 118, 0.4);
+        }
+
+        button:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(255, 154, 118, 0.55); }
+        button:active { transform: translateY(0); }
+
+        #mmm {
+            color: #ffb347;
+            margin-top: 14px;
+            font-weight: 600;
+            min-height: 1.2em;
+        }
+
+        footer { text-align: center; margin-top: 26px; }
+
+        footer a {
+            color: #ffe9c4;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 8px 18px;
+            border: 1px solid rgba(255, 233, 196, 0.4);
+            border-radius: 999px;
+            transition: all 0.25s ease;
+        }
+
+        footer a:hover { background: rgba(255, 233, 196, 0.15); }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <h1>Before we move on I need to make sure it's really you <span class="emoji">&#128578;</span></h1>
+        <p class="subtitle">(This is just an excuse for me to revise creating forms &#128514;)</p>
+
+        <div class="divider"></div>
+
+        <form>
+            <div class="field">
+                <label for="mname">Enter your First Name:</label>
+                <input type="text" id="mname" name="mname" placeholder="Don't type 'Moonie'" required>
+            </div>
+
+            <div class="field">
+                <label for="wname">Enter your Second Name:</label>
+                <input type="text" id="wname" name="wname" placeholder="Must fill" required>
+            </div>
+
+            <div class="field">
+                <label for="mail">Enter your email:</label>
+                <input type="email" id="mail" name="mail" placeholder="e.g moonie@gmail.com" required>
+            </div>
+
+            <div class="field">
+                <label for="phone">Phone number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+254## #### ###">
+            </div>
+
+            <div class="field">
+                <label for="bday">Birthdate:</label>
+                <input type="date" id="bday" name="bday">
+            </div>
+
+            <div class="field">
+                <label>Gender:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="Male"> Male</label>
+                    <label><input type="radio" name="gender" value="Female"> Female</label>
+                </div>
+            </div>
+
+            <p class="note">I'd continue but nimechoka &#128514;</p>
+            <p class="note">But before you proceed...</p>
+
+            <div class="field">
+                <label for="password" class="warn">Weka Password:</label>
+                <input type="password" id="password" name="password" placeholder="Its Your ID &#128514;">
+            </div>
+        </form>
+
+        <div class="actions">
+            <button type="button" onclick="dothis()">Submit</button>
+            <p id="mmm"></p>
+        </div>
+
+        <footer>
+            <a href="Win.html">← Back</a>
+        </footer>
+    </main>
+
+    <script>
+        function dothis() {
+            const correctID = "855133484";
+            const enteredID = document.getElementById("password").value;
+
+            if (enteredID === correctID) {
+                window.location.href = "win.html";
+            } else {
+                document.getElementById("mmm").innerHTML = "Kwani you gave me the wrong ID number";
+            }
+        }
+    </script>
+</body>
+</html>

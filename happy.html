@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY BIRTHDAY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Quicksand', sans-serif;
+            background:
+                radial-gradient(circle at 15% 10%, #ffe1ec 0%, transparent 45%),
+                radial-gradient(circle at 85% 85%, #fff3c4 0%, transparent 45%),
+                linear-gradient(180deg, #fff7fb, #fde8f1);
+            color: #3a2a3a;
+            line-height: 1.75;
+            padding: 24px 14px 60px;
+        }
+
+        .wrap {
+            max-width: 760px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.78);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 182, 213, 0.5);
+            border-radius: 22px;
+            padding: 24px 22px;
+            box-shadow: 0 12px 40px rgba(200, 80, 130, 0.12);
+        }
+
+        .choose {
+            background: linear-gradient(135deg, #fff5d6, #ffd6e0);
+            border: 1px solid rgba(255, 132, 132, 0.35);
+            border-radius: 22px;
+            padding: 24px 22px;
+            box-shadow: 0 12px 40px rgba(255, 100, 130, 0.18);
+        }
+
+        .choose p { margin-bottom: 12px; }
+        .choose .hint { font-style: italic; color: #a8324c; font-size: 0.92rem; }
+
+        .song-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .song-grid button {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: white;
+            border: none;
+            border-radius: 14px;
+            padding: 14px 10px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            margin: 0;
+        }
+        .song-grid button:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0,0,0,0.2); }
+
+        #Khalid { background: linear-gradient(135deg, #fde047, #f59e0b); color: #4a2a00; }
+        #Baby1  { background: linear-gradient(135deg, #f9a8d4, #ec4899); }
+        #bordas { background: linear-gradient(135deg, #1f2937, #000); }
+        #met  { background: linear-gradient(135deg, #ff4d8d, #c2185b); }
+        #kid    { background: linear-gradient(135deg, #e25252, #fde047); color: #4a1a00; }
+        #Tory   { background: linear-gradient(135deg, #c084fc, #6d28d9); }
+
+        .divider {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(194, 24, 91, 0.35), transparent);
+            margin: 8px 0;
+        }
+
+        #message {
+            font-family: 'Pacifico', cursive;
+            color: rgb(172, 29, 60);
+            text-align: center;
+            font-size: 1.8rem;
+            line-height: 1.3;
+            min-height: 0;
+        }
+        #message:not(:empty) { margin: 6px 0 6px; }
+
+        .story p { margin-bottom: 12px; }
+
+        .image-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            margin: 18px 0;
+        }
+        .image-row a {
+            display: block;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+            transition: transform 0.25s ease;
+        }
+        .image-row a:hover { transform: translateY(-3px) scale(1.02); }
+        .image-row img { display: block; width: 200px; height: auto; }
+
+        a { color: #c2185b; text-decoration: none; font-weight: 600; }
+        a:hover { text-decoration: underline; }
+
+        .accent { color: rgb(226, 34, 140); font-weight: 700; }
+
+        footer {
+            text-align: center;
+            margin-top: 10px;
+        }
+        footer a {
+            display: inline-block;
+            padding: 10px 22px;
+            border: 1px solid #e58bb6;
+            border-radius: 999px;
+            color: #c2185b;
+            transition: all 0.25s ease;
+        }
+        footer a:hover { background: #e58bb6; color: white; text-decoration: none; }
+    </style>
+    <script>
+        function toggleSong(songId) {
+            const song = document.getElementById(songId);
+            // If the song is already playing, pause it
+            if (!song.paused) {
+                song.pause();
+                return;
+            }           
+            // Pause all other songs
+            document.querySelectorAll("audio").forEach(audio => {
+                audio.pause();
+            });         
+            // Play the selected song
+            song.play();
+        }
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <section class="choose">
+            <p>Heyyy I chose some of the songs that remind me of you so you can choose the one you like and listen to it as you browse through the web pages &#128578;</p>
+            <p>as long as you dont close this tab &#128514; ....Some are just instrumentals</p>
+            <p class="hint">Click a song to play it then click it again to pause it... i fixed that part</p>
+
+            <div class="song-grid">
+                <button onclick="toggleSong('motion')" id="Khalid">Motion</button>
+                <button onclick="toggleSong('keem')" id="Baby1">16</button>
+                <button onclick="toggleSong('saint')" id="bordas">Borders</button>
+                <button onclick="toggleSong('night')"id="met">The night we met</button>
+                <button onclick="toggleSong('willing')" id="kid">Willing To Trust</button>
+                <button onclick="toggleSong('violet')" id="Tory">The Color Violet</button>
+            </div>
+
+            <audio id="motion" loop><source src="Khalid - Motion (Karaoke Version)(MP3_160K).mp3" type="audio/mpeg"></audio>
+            <audio id="keem" loop><source src="Baby Keem - 16 (Official Video)(MP3_160K).mp3" type="audio/mpeg"></audio>
+            <audio id="saint" loop><source src="Saint Jhn  - _Borders_ ft. Lenny Kravitz (Official Music Video)(MP3_160K).mp3" type="audio/mpeg"></audio>
+            <audio id="night" loop><source src="The Night We Met(MP3_160K).mp3" type="audio/mpeg"></audio>
+            <audio id="willing" loop><source src="Kid Cudi _ Ty Dolla _ign - Willing To Trust (Instrumental)(MP3_160K).mp3" type="audio/mpeg"></audio>
+            <audio id="violet" loop><source src="Tory Lanez - The Color Violet (Lyrics)(MP3_160K).mp3" type="audio/mpeg"></audio>
+        </section>
+
+        <h1 id="message"></h1>
+
+        <section class="card story">
+            <p>Its May 10th.. I finished my stressful exams.. and i thought designing this site would help me with my html exam &#128557; (I was wrong)</p>
+            <p>like 80 % of the exam was theory .. ata haimake sense si as long as i know how to code.. who cares about the characteristics of a good website</p>
+            <p>ANYWAY... Happy birthday Winnie &#128514;</p>
+            <p>Damn You're 20 now.. Don't you feel weird dating someone so young &#128514; I mean you're more experienced then me when it comes to a lot of stuff</p>
+            <p>Including dating.. i feel weird about it sometimes. but oh well I'm guessing there's somethingyou see in me that I don't see in myself &#128514;</p>
+            <p>I still don't know what to get you for your birthday</p>
+            <p>For some reason I feel like you won't like a bottle of water.. maybe I'll get you some fruits.. ama I can give you a hug &#128578;</p>
+            <p>We'll just see</p>
+
+            <hr class="divider">
+
+            <p>Maybe I should just list some of the songs that remind me of you in this page .. apart from Khalid songs and the songs from our playlist</p>
+            <p>I don't know if you remember this song I told you about kitambo.. back when I was living alone. I'll place a spotify link on the image coz putting the song the other way might complicate things &#128514;</p>
+
+            <div class="image-row">
+                <a href="https://open.spotify.com/track/50x1Ic8CaXkYNvjmxe3WXy?si=B-G4FYHeQrqghHUGDXPERA" target="_blank">
+                    <img src="Those eyes.jpg" alt="Those eyes">
+                </a>
+            </div>
+
+            <p>Come to think of it I'm not as obsessed as I was back then &#128514; labda I'm improving...</p>
+            <p>Then there's this song that's kinda like a post breakup song but It makes me think of you.. sijui mbona &#128514;</p>
+
+            <div class="image-row">
+                <a href="https://open.spotify.com/track/0VO8gYVDSwM1Qdd2GsMoYK?si=XRvufQB5S6CmkqwE_-a-Rw" target="_blank">
+                    <img src="moth.jpg" alt="Moth to a flame">
+                </a>
+            </div>
+
+            <p>I usually think about send it to you if you ever find someone else.. then I start feeling sad . Im a weird person &#128514;</p>
+            <p>Then there's Love in the dark by Adele.. It reminds me of that time we weren't talking.. coz I was listening to it alot back then</p>
+            <p>she's actually my favorite female artist btw &#128514;. I feel like we've hurt each other a lot. I just hope I make you feel loved more than i hurt you</p>
+            <p>But I won't focus on the sad stuff.. It's your birthday &#128514;</p>
+            <p>wacha nisimention songs from our playlist &#128514; like soundgasm &#128527;</p>
+            <p>but there's this song by H.E.R that makes me think of you.. <span class="accent">Best part</span> I don't know if you remember but it was the first song you told me to go listen to</p>
+            <p>I was asking you what was the best part about the first time we met.. we were at the Gazibo na you were refusing to tell me for some reason &#128514; I'd say I miss those times but you had a boyfriend so no.. I don't miss those times &#128514;</p>
+            <p>I hate that you're going to finish going through all this in seconds na it took me days to prepare &#128557; &#128557; It's your fault for being a fast reader btw</p>
+            <p>Anyway.. I don't know what I'll do for the next page but <a href="Winnie.html" target="_blank">Click here</a> to proceed.. might be the last page coz I'm running out of ideas &#128514;</p>
+        </section>
+
+        <footer>
+            <a href="Win.html">← Back</a>
+        </footer>
+    </div>
+</body>
+</html>

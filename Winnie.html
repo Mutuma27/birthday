@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Winnie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Quicksand', sans-serif;
+            background:
+                radial-gradient(circle at 20% 10%, #ffd8e6 0%, transparent 45%),
+                radial-gradient(circle at 80% 90%, #d6e9ff 0%, transparent 45%),
+                linear-gradient(180deg, #fff7fb, #fde8f1);
+            color: #3a2a3a;
+            line-height: 1.7;
+            padding: 24px 14px 60px;
+        }
+
+        .wrap {
+            max-width: 760px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 182, 213, 0.5);
+            border-radius: 22px;
+            padding: 26px 22px;
+            box-shadow: 0 12px 40px rgba(200, 80, 130, 0.12);
+        }
+
+        h2 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.4rem;
+            color: rgba(165, 42, 42, 0.55);
+            text-align: center;
+            margin-bottom: 14px;
+            line-height: 1.2;
+        }
+
+        p { margin-bottom: 14px; }
+
+        #p1 { color: #2454c7; }
+        #p2 { color: #c0392b; }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+            align-items: start;
+            margin: 12px 0;
+        }
+
+        @media (min-width: 720px) {
+            .video-grid { grid-template-columns: 1.4fr 1fr; }
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+            background: #000;
+        }
+
+        .note-red {
+            display: block;
+            margin-top: 10px;
+            color: #c0392b;
+            font-size: 0.92rem;
+            font-style: italic;
+        }
+
+        .pacifico {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        button {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            color: white;
+            border: none;
+            border-radius: 999px;
+            padding: 10px 22px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        button:hover { transform: translateY(-2px); }
+
+        #b1 {
+            background: linear-gradient(90deg, rgb(207, 39, 123), blue);
+            box-shadow: 0 6px 16px rgba(207, 39, 123, 0.35);
+            margin-top: 12px;
+        }
+
+        #atl {
+            display: block;
+            margin: 14px auto;
+            width: auto;
+            min-width: 140px;
+            background: linear-gradient(90deg, rgb(28, 209, 58), rgb(22, 188, 230));
+            box-shadow: 0 6px 16px rgba(22, 188, 230, 0.35);
+        }
+
+        pre {
+            font-family: 'Caveat', cursive;
+            font-size: 1.15rem;
+            line-height: 1.55;
+            color: #4a2a4a;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background: linear-gradient(135deg, #fff5fa, #fdeef7);
+            border-left: 4px solid #e58bb6;
+            border-radius: 14px;
+            padding: 18px 20px;
+            margin: 18px 0;
+        }
+
+        a { color: #c2185b; text-decoration: none; font-weight: 600; }
+        a:hover { text-decoration: underline; }
+
+        .closing {
+            text-align: center;
+            font-size: 1.05rem;
+            line-height: 2;
+        }
+
+        .closing .big {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.8rem;
+            color: #c2185b;
+            display: block;
+            margin: 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        footer a {
+            display: inline-block;
+            padding: 10px 22px;
+            border: 1px solid #e58bb6;
+            border-radius: 999px;
+            color: #c2185b;
+            transition: all 0.25s ease;
+        }
+
+        footer a:hover { background: #e58bb6; color: white; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <section class="card">
+            <h2>Hellooo <br>Haeee &#128514;</h2>
+            <p>I wish I really knew how to code like those proffessionals .. I'd create an amazing site full of weird stuff. Alafu this thing doesn't have autocorrect so if you see some mistakes just ignore them &#128514;</p>
+            <p>Kitambo I used to like editing.. so I think I'll make an edit of you. But sasa I don't have many videos of you.. and I don't have a good app for it and I feel really lazy.</p>
+            <p>Wacha I'll ask you for the videos after I find an app and an idea for the song. Might take a few weeks &#128514;</p>
+            <p>But knowing you you probably won't send me the videos &#128514; ukikataa I'll just use the ones I have and leave a couple of blanks &#128514;&#128514;</p>
+        </section>
+
+        <section class="card">
+            <p id="p1">
+                I finally found a song (or rather..a sound) for the edit .. but ni ya anime I'm not sure you'll like it &#128514;<br>
+                but I can't find a premium version of capcut to download.. I guess I'll just have to use the free and borring effects &#128557;
+            </p>
+        </section>
+
+        <section class="card">
+            <div id="p2">
+                <p>Nilijua tu you'll make me beg for the videos &#128557;</p>
+                <p>But it's done.. Don't compare it to the edits you see in tiktok &#128557; and I hope you'll like it.</p>
+                <p>It's not that long though.</p>
+
+                <div class="video-grid">
+                    <div>
+                        <video controls>
+                            <source src="lv_0_20250526125532.mp4" type="video/mp4">
+                        </video>
+                        <span class="note-red">
+                            Ummm... aparently the video size is too big to be posted kwa site so I'll just send it to you in whatsapp.
+                            I'm typing this incase I dont get a way of making it possible.
+                        </span>
+                    </div>
+                    <div class="pacifico">
+                        Maybe it's better watching it on phone &#128514;<br>
+                        I'm assuming that you're using your laptop. Na I'm not editting that last part out btw &#128537;<br>
+                        You might want to download it so wacha niweke link &#128514;
+                        <a href="lv_0_20250526125532.mp4" download="Pretty girl edit"><button id="b1">Download</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <p>Sijui what to say or do now.</p>
+            <p>Right now I'm this song called Atlantis by sea fret im sure you've heard of it. ama wacha niiweke hapa &#128514;</p>
+            <p>Its probably my favorite sad song.</p>
+            <p>You might need to close the other page if there's music still playing there though.</p>
+
+            <button id="atl" onclick="toggleSong('seafret')">▶ Atlantis</button>
+            <audio id="seafret" loop>
+                <source src="Seafret - Atlantis (Lyrics)(MP3_160K)_1.mp3" type="audio/mpeg">
+            </audio>
+
+            <p>So Tomorrow's your birthday &#128578;</p>
+            <p>But I guess you're still not excited about it.. I hoped all this would change your mind but I don't know.</p>
+
+            <pre>I'm really sorry for ruining things 
+I just felt like you'd be better off without worrying about if you're doing stuff that'll hurt me 
+but I should've asked you about it or told you what I was thinking Kitambo
+Just try to have fun today .. maybe with your family ama maybe you'd prefer having fun alone coz you're an "Introvert" &#128514;
+I don't know what'll happen between us but I wasn't asking for a permanent breakup. I mean it got to a point where I started thinking
+about how it would be if we got married. But then I remember that you're older than me and maybe you'd like someone older &#128514;
+plus I didn't fit the qualities of your dream guy..the ones you listed for me kitambo
+But who knows what will happen.. I mean I wouldn't mind marrying you &#128578;
+I'm willing to forget all the bad things that have happened between us coz I feel like the reason I overthink too much 
+is because I keep remembering the bad stuff. I don't know why some of the good stuff don't come to mind 
+like the fact that you left someone you really liked for me or that you didn't leave me after knowing about my issues
+and I'm sure if i forget all that stuff I'll be able to trust you the same way I did back then.. But I still trust you alot
+I mean I'm trusting you with my life with this &#128557; If you send this to any of my friends my life will be over &#128557;&#128557;
+Lakini even with all my overthinking I dont doubted your love for me. and I'm sure you dont doubt me.. 
+I know you said you never feel loved coz of your past trauma and nothing i say will change that .. but maybe this will change that &#128557; idk
+or maybe it'll change the day I propose &#128578;
+            </pre>
+
+            <div class="closing">
+                <p>Anyway.. I think i'm done yapping through text &#128514;</p>
+                <p>Idk if i should say I love you... do friends tell eachother that &#128514;</p>
+                <span class="big">Happy birthday Winnie &#128578;</span>
+                <p>I love you &#128578;&#128578;</p>
+                <p>Please don't show anyone this &#128514;</p>
+                <p>you can press <a href="beautiful.html">This</a> to continue</p>
+            </div>
+        </section>
+
+        <footer>
+            <a href="happy.html">← Back</a>
+        </footer>
+    </div>
+
+    <script>
+        function toggleSong(songId) {
+            const song = document.getElementById(songId);
+            // If the song is already playing, pause it
+            if (!song.paused) {
+                song.pause();
+                return;
+            }           
+            // Pause all other songs
+            document.querySelectorAll("audio").forEach(audio => {
+                audio.pause();
+            });         
+            // Play the selected song
+            song.play();
+        }
+    </script>
+</body>
+</html>
